@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Tiago Antônio Koslovski Sassi , TAKS" />
+    <meta name="description" content="Consultoria e Desenvolvimento de Software Tiago Antonio Koslovski Sassi" />
+    <meta name="keywords" content="taks,software,consultoria,desenvolvimento,brasilia,noroeste,tiago,antonio,koslovski, sassi"
+    />
+    <meta name="Resource-type" content="Document" />
+
+    <link href="css/jquery-ui.min.css" rel="stylesheet" />
+    <link href="css/jquery.fullpage.min.css" rel="stylesheet" />
+    <link href="css/fullpage_estilo.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/animate.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"> </script>
+    <script type="text/javascript" src="js/jquery.fullpage.min.js"> </script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/particles.min.js"> </script>
+    <style>
+        #part {
+            z-index: 10;
+            position: absolute;
+        }
+
+        .parado {
+            background: black;
+        }
+
+        .animado {
+            animation: animacao 4s;
+        }
+
+        @keyframes animacao {
+            from {
+                margin-top: 400px;
+                background: gray;
+            }
+
+            to {
+                margin-left: 0px;
+                background-color: transparent;
+            }
+        }
+    </style>
+
+    <!--[if IE]>
+        <script type="text/javascript">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->
+
+
+
+    <script>
+        $(document).ready(function () {
+
+
+            $('#fullpage').fullpage({
+                sectionsColor: ['darkorange', 'orange', 'gold'],
+                anchors: ['primeiro', 'segundo', 'terceiro'],
+                menu: '#menu',
+                afterRender: function (index, newIndex, direction) {
+                    $('.parado').removeClass("parado").addClass("animado");
+                },
+                onLeave: function (index, newIndex, direction) {
+                    if (index == 1 && direction == 'down') {
+                        $('.animated').removeClass("bounce").addClass("slideLeft");
+                        
+                        console.log($('.parado'));
+                        console.log('down');
+                    }
+
+                    if (index == 1 && direction == 'down') {
+                        $('.animated').removeClass("slideLeft").addClass("bounce");
+                        console.log($('.animated'));
+                        console.log('up');
+                    }
+
+                    if (index == 2 && direction == 'up') {
+                        $('.animated').removeClass("bounce").addClass("slideLeft");
+                        console.log($('.animated'));
+                        console.log('up');
+                    }
+                },
+            });
+
+            $("#spinner").spinner();
+            $("#tabs").tabs();
+
+        });
+
+
+
+    </script>
+
+
+
+
+
+    <title>www.taks.com.br Desenvolvimento de Software</title>
+</head>
+
+<body>
+    <ul id="menu">
+        <li data-menuanchor="primeiro" class="active">
+            <a href="#primeiro">TAKS</a>
+        </li>
+        <li data-menuanchor="segundo">
+            <a href="#segundo">Serviços</a>
+        </li>
+        <li data-menuanchor="terceiro">
+            <a href="#terceiro">Contato</a>
+        </li>
+    </ul>
+
+
+    <div id="fullpage">
+        <div class="section active" id="taks">
+
+            <div class="parado">
+                <p>Consultoria e Desenvolvimento de Software</p>
+                <img src="img/notebook.png" title="TAKS" />
+                <h3>Tiago Antonio Koslovski Sassi</h3>
+            </div>
+
+
+        </div>
+        <div class="section" id="section1">
+            <div class="slide" id="slide1">
+                    <img class="animated slideLeft" src="img/desktop.jpg" width="200px" />
+                <div class="container">
+                   
+                    <h1 class="animated slideLeft">Análise de Sistemas</h1>
+                    <h1>Manutenção de código legado</h1>
+
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section2">
+            <div class="intro">
+                <h1>Contato</h1>
+                <p>Formulario</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

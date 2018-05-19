@@ -1,156 +1,316 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<html lang="pt-Br">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <meta name="author" content="Tiago Antônio Koslovski Sassi , TAKS" />
-    <meta name="description" content="Consultoria e Desenvolvimento de Software Tiago Antonio Koslovski Sassi" />
-    <meta name="keywords" content="taks,software,consultoria,desenvolvimento,brasilia,noroeste,tiago,antonio,koslovski, sassi"
-    />
-    <meta name="Resource-type" content="Document" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Tiago Antônio Koslovski Sassi , TAKS" />
+  <meta name="description" content="Consultoria e Desenvolvimento de Software Tiago Antonio Koslovski Sassi" />
+  <meta name="keywords" content="taks,software,consultoria,desenvolvimento,brasilia,noroeste,tiago,antonio,koslovski, sassi"
+  />
+  <meta name="Resource-type" content="Document" />
 
-    <link href="css/jquery-ui.min.css" rel="stylesheet" />
-    <link href="css/jquery.fullpage.min.css" rel="stylesheet" />
-    <link href="css/fullpage_estilo.css" rel="stylesheet" />
-    <style>
-        #part {
-            z-index: 10;
-            position: absolute;
-        }
+  <title>Tiago Antônio Koslovski Sassi</title>
 
-        .animado {
-            animation: slidein 4s;
-        }
+  <link href="css/jquery-ui.min.css" rel="stylesheet" />
+  <link href="css/jquery.fullpage.min.css" rel="stylesheet" />
+  <link href="componentes/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/animate.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 
-        @keyframes slidein {
-            from {
-                margin-top: 200px;
-
-            }
-
-            to {
-                margin-top: 0px;
-                background-color: transparent;
-            }
-    </style>
-
-    <!--[if IE]>
-        <script type="text/javascript">
-             var console = { log: function() {} };
-        </script>
-    <![endif]-->
-
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js" /></script>
-    <script type="text/javascript" src="js/jquery.fullpage.min.js" /></script>
-    <script type="text/javascript" src="js/particles.min.js" /></script>
-
-    <script>
-        $(document).ready(function () {
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+  <script type="text/javascript" src="js/jquery.fullpage.min.js"> </script>
+  <script type="text/javascript" src="componentes/bootstrap/js/bootstrap.min.js"></script>
 
 
-            $('#fullpage').fullpage({
-                sectionsColor: ['orange', 'darkorange', 'gold'],
-                anchors: ['primeiro', 'segundo', 'terceiro', 'quarto', 'ultimo'],
-                menu: '#menu',
-                afterRender: function (index, newIndex, direction) {
-                    $('img').removeClass("animado").addClass("animado");
-                    if (index == 1 && direction == 'up') {
-                        $('img').removeClass("animado").addClass("animado");
-                        alert('up');
-                    }
-                },
-                onLeave: function (index, newIndex, direction) {
-                    if (index == 1 && direction == 'up') {
-                        $('img').removeClass("animado").addClass("animado");
-                        alert('up');
-                    }
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+  <link href="componentes/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="componentes/devicons/devicon.css" rel="stylesheet">
+  <link href="componentes/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+  <link href="css/estilo.css" rel="stylesheet">
 
-                    if (index == 1 && direction == 'down') {
-
-                        $('.section').eq(index - 1).removeClass('moveDown').addClass('moveUp');
-                    }
-                    else if (index == 3 && direction == 'up') {
-                        $('.section').eq(index - 1).removeClass('moveUp').addClass('moveDown');
-                    }
-
-                    $('#staticImg').toggleClass('active', (index == 2 && direction == 'down') || (index == 4 && direction == 'up'));
-                    $('#staticImg').toggleClass('moveDown', newIndex == 4);
-                    $('#staticImg').toggleClass('moveUp', index == 4 && direction == 'up');
-                },
-            });
-
-            $("#spinner").spinner();
-            $("#tabs").tabs();
-
-        });
-
-
-
-    </script>
-
-
-
-
-
-    <title>www.taks.com.br Desenvolvimento de Software</title>
 </head>
 
-<body>
-    <ul id="menu">
-        <li data-menuanchor="primeiro" class="active">
-            <a href="#primeiro">TAKS</a>
+<body id="page-top">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      <span class="d-block d-lg-none">www.taks.com.br</span>
+      <span class="d-none d-lg-block">
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2 animated flip" src="img/notebook.png" alt="TAKS">
+      </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#sobre">Sobre</a>
         </li>
-        <li data-menuanchor="segundo">
-            <a href="#segundo">Serviços</a>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#experiencia">Experiência</a>
         </li>
-        <li data-menuanchor="terceiro">
-            <a href="#terceiro">Contato</a>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#educacao">Educação</a>
         </li>
-    </ul>
-
-
-    <div id="fullpage">
-        <div class="section active" id="taks">
-
-            <p>Consultoria e Desenvolvimento de Software</p>
-            <img src="img/notebook.png" title="TAKS" />
-            <h3>Tiago Antonio Koslovski Sassi</h3>
-
-
-        </div>
-        <div class="section" id="section1">
-            <div class="slide" id="slide1">
-                <div class="intro">
-                    <h1>Análise de Sistemas</h1>
-                    <p></p>
-                </div>
-            </div>
-            <div class="slide active" id="slide2">
-                <div class="intro">
-                    <h1>Pesquisa & Desenvolvimento</h1>
-                    <p></p>
-                </div>
-            </div>
-            <div class="slide" id="slide3">
-                    <div class="intro">
-                    <h1>Manutenção de código legado</h1>
-                    <p></p>
-                </div>
-            </div>
-
-        </div>
-        <div class="section" id="section2">
-            <div class="intro">
-                <h1>Contato</h1>
-                <p>Formulario</p>
-            </div>
-        </div>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#habilidades">Habilidades</a>
+        </li>
+      </ul>
     </div>
+  </nav>
 
+  <div class="container-fluid p-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex d-column" id="sobre">
+      <div class="my-auto">
+        <img class="img-fluid animated fadeInRight" src="img/desktop.jpg" width="300px" alt="">
+        <h2 class="mb-0 animated fadeInDown">Tiago Antônio Koslovski Sassi </h2>
+        <div class="subheading mb-5 animated fadeInUp">Distrito Federal - Brasília - Setor Noroeste </div>
+
+        <p class="mb-5">Sou um Analista de Sistemas Sênior atuando sob a modalidade de freelancer. </p>
+        <ul class="list-inline list-social-icons mb-0">
+          <li class="list-inline-item">
+            <a href="#">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="tel:+5561992454950">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-whatsapp  fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="http://www.linkedin.com/in/taks79/" title="Linkedin">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="https://github.com/tsassi" title="Github">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experiencia">
+      <div class="my-auto">
+        <h2 class="mb-5">Experiência</h2>
+
+        <div class="resume-item d-flex flex-column flex-md-row mb-5">
+          <div class="resume-content mr-auto">
+            <h3 class="mb-0">Analista de Sistemas Sênior</h3>
+            <div class="subheading mb-3">www.taks.com.br</div>
+            <p>Análise de Sistemas</p>
+            <p>Pesquisa e Desenvolvimento de Soluções</p>
+            <p>Implementação / Codificação / Manutenção de código legado</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">Freelancer</span>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="educacao">
+      <div class="my-auto">
+        <h2 class="mb-5">Educação</h2>
+
+        <div class="resume-item d-flex flex-column flex-md-row mb-5">
+          <div class="resume-content mr-auto">
+            <h3 class="mb-0">Universidade Regional Integrada - Câmpus de Erechim</h3>
+            <div class="subheading mb-3">Bacharelado em Ciência da Computação</div>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">1996 - 2002</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="habilidades">
+      <div class="my-auto">
+        <h2 class="mb-5">Habilidades</h2>
+
+
+
+        <div class="subheading mb-3">Sistemas Operacionais</div>
+        <ul class="list-inline list-icons">
+          <li class="list-inline-item">
+            <i class="devicon-windows8-original"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-apple-original"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-linux-plain"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-ubuntu-plain-wordmark"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-redhat-plain-wordmark"></i>
+          </li>
+        </ul>
+
+        <div class="subheading mb-3">Linguagens de Programação</div>
+        <ul class="list-inline list-icons">
+          <li class="list-inline-item">
+            <i class="devicon-csharp-plain-wordmark"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-java-plain-wordmark"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-python-plain-wordmark"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-javascript-plain-wordmark"></i>
+          </li>
+        </ul>
+
+        <div class="subheading mb-3">Ferramentas</div>
+        <ul class="list-inline list-icons">
+          <li class="list-inline-item">
+            <i class="devicon-visualstudio-plain"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-vim-plain"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-ssh-plain-wordmark"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-inkscape-plain"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-bitbucket-plain-wordmark"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-git-plain-wordmark"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-github-plain-wordmark"></i>
+          </li>
+        </ul>
+
+        <div class="subheading mb-3">Navegadores Web</div>
+        <ul class="list-inline list-icons">
+          <li class="list-inline-item">
+            <i class="devicon-ie10-original"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-safari-plain-wordmark"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-firefox-plain"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-chrome-plain"></i>
+          </li>
+        </ul>
+
+        <div class="subheading mb-3">Banco de Dados</div>
+        <ul class="list-inline list-icons">
+          <li class="list-inline-item">
+            <i class="devicon-mysql-plain-wordmark"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-postgresql-plain-wordmark"></i>
+          </li>
+        </ul>
+
+        <div class="subheading mb-3">Web Design</div>
+        <ul class="list-inline list-icons">
+          <li class="list-inline-item">
+            <i class="devicon-html5-plain-wordmark"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-css3-plain-wordmark"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-jquery-plain-wordmark"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-bootstrap-plain-wordmark"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-dot-net-plain-wordmark"></i>
+            <span class="subheading mb-3"></span>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-django-plain-wordmark"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-tomcat-plain-wordmark"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="devicon-google-plain-wordmark"></i>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+  </div>
+
+
+
+
+  <script>
+    (function ($) {
+      "use strict";
+
+      //jQuery easing
+      $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+          if (target.length) {
+            $('html, body').animate({
+              scrollTop: (target.offset().top)
+            }, 1000, "easeInOutExpo");
+            return false;
+          }
+        }
+      });
+
+      // Closes responsive menu when a scroll trigger link is clicked
+      $('.js-scroll-trigger').click(function () {
+        $('.navbar-collapse').collapse('hide');
+      });
+
+      // Activate scrollspy to add active class to navbar items on scroll
+      $('body').scrollspy({
+        target: '#sideNav'
+      });
+
+    })(jQuery); // End of use strict
+
+  </script>
 
 </body>
 
