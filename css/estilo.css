@@ -140,11 +140,11 @@ section.resume-section .resume-item .resume-date {
 }
 
 a {
-  color: black;
+  color: black; !important;
 }
 
 a:hover, a:focus, a:active {
-  color: orange;
+  color: darkgray; !important;
 }
 
 
