@@ -1,3 +1,3 @@
-###[TAKS](www.taks.com.br)
+[TAKS](www.taks.com.br)
 ![TAKS](/img/notebook.png)
 
