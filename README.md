@@ -14,4 +14,10 @@ TAKS
 | |
 
 
+- [ ] npm
+- [ ] vite
+- [ ] react
+- [ ] boostrap 5
+
+
 
